@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	var I, J, X int
+
+	fmt.Printf("Masukkan jumlah tabel perkalian : ")
+	fmt.Scanf("%d", &X)
+	for I = 1; I <= X; I++ {
+		for J = 1; J <= X; J++ {
+			fmt.Printf("%d ", I*J)
+		}
+		fmt.Printf("\n")
+	}
+}
