@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+func main() {
+	var studentScore int = 80
+
+	if studentScore > 79 && studentScore <= 100 {
+		fmt.Println("A")
+	}
+	if studentScore > 64 && studentScore < 80 {
+		fmt.Println("B")
+	}
+	if studentScore > 49 && studentScore < 65 {
+		fmt.Println("C")
+	}
+	if studentScore > 34 && studentScore < 50 {
+		fmt.Println("D")
+	}
+	if studentScore >= 0 && studentScore < 35 {
+		fmt.Println("E")
+	}
+	if studentScore < 0 && studentScore > 100 {
+		fmt.Println("Nilai Invalid")
+	}
+}
