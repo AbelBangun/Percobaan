@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	var i, j, baris int
+
+	fmt.Println("input baris piramid ada berapa = ")
+	fmt.Scanln(&baris)
+
+	for i = 1; i <= baris; i++ {
+	}
+		for j + 1; j<= baris-i; j++ {
+			fmt.Print("")
+		}
+		for k :=0; k != (2*i -1); k++ {
+			fmt.Println("*")
+		}
+	fmt.Println()
