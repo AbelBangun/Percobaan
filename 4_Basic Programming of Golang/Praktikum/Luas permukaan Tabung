@@ -1,0 +1,12 @@
+package main
+
+import "fmt"
+
+func main() {
+	const phi float64 = 3.14
+
+	jarijari := 4.0
+	tinggi := 20.0
+	Luas := 2 * jarijari * (jarijari + tinggi) * (3.14)
+	fmt.Print(Luas)
+}
