@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func printfacktor(n int) {
+
+	fmt.Println("1")
+	for i := 2; i <= int(math.Sqrt(float64(n))); i++ {
+		if n%i == 0 {
+			fmt.Println(i)
+			//n /= i
+			i++
+		}
+	}
+	if n > 0 {
+		fmt.Println(n)
+	}
+}
+func main() {
+	n := 20
+	printfacktor(n)
+}
