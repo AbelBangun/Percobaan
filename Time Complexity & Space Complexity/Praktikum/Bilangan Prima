@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+func primenumber(number int) bool {
+
+	var jumlah_faktor = 0
+	for i := 1; i <= number; i++ {
+		if number%i == 0 {
+			jumlah_faktor++
+		}
+	}
+
+	if jumlah_faktor == 2 {
+		return true
+	}
+	return false
+
+}
+
+func main() {
+
+	fmt.Println(primenumber(1000000007))
+	fmt.Println(primenumber(13))
+	fmt.Println(primenumber(17))
+	fmt.Println(primenumber(20))
+	fmt.Println(primenumber(35))
+}
