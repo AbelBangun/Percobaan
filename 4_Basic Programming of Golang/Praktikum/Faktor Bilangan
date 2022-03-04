@@ -1,25 +1,18 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "fmt"
 
-func printfacktor(n int) {
+func main() {
 
-	fmt.Println("1")
-	for i := 2; i <= int(math.Sqrt(float64(n))); i++ {
-		if n%i == 0 {
-			fmt.Println(i)
-			//n /= i
-			i++
+	var N, a int
+	fmt.Printf("Masukkan angka : ")
+	fmt.Scanf("%d", &N)
+
+	for a = N; a > 0; a-- {
+		if N%a == 0 {
+			fmt.Println(a)
+
 		}
 	}
-	if n > 0 {
-		fmt.Println(n)
-	}
-}
-func main() {
-	n := 20
-	printfacktor(n)
+
 }
