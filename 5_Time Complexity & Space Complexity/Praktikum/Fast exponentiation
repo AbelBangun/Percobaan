@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func Pow(X, n int) int {
+	var a int
+	var total int = 1
+	for a := 1; a <= n; a++ {
+
+		total = total * X
+
+		fmt.Println(total)
+
+		//fmt.Println("--------")
+	}
+	return a
+}
+
+func main() {
+	fmt.Println(Pow(2, 3))
+	fmt.Println(Pow(5, 3))
+	fmt.Println(Pow(10, 2))
+	fmt.Println(Pow(2, 5))
+	fmt.Println(Pow(7, 3))
+}
