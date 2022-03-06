@@ -1,0 +1,12 @@
+package main
+
+import "fmt"
+
+func main() { 
+	arrayA := []string{"King", "devil jin", "akuma"}
+
+	arrayA = append(arrayA, "eddie", "steve", "geese")
+	fmt.Println(arrayA)
+
+}
+
