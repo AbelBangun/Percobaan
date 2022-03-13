@@ -1,0 +1,63 @@
+package main
+
+import "fmt"
+
+type Student struct {
+	name  []string
+	score []int
+}
+
+func (s Student) Avarage() float64 {
+
+	sum := 0
+	n := 5
+	for i := 0; i < n; i++ {
+		sum += s.score[i]
+		//	fmt.Println(Avarage)
+	}
+	return (float64(sum) / float64(n))
+
+}
+
+func (s Student) Min() (min int, name string) {
+
+	min = s.score[0]
+	for _, scoreMin := range s.score {
+		if min > scoreMin {
+			min = scoreMin
+		}
+	}
+	return
+}
+
+func (s Student) Max() (max int, name string) {
+	max = s.score[0]
+	for _, scoreMax := range s.score {
+		if max < scoreMax {
+			max = scoreMax
+		}
+	}
+	return
+}
+
+func main() {
+	var a = Student{}
+
+	for i := 1; i < 6; i++ {
+		var name string
+		fmt.Print("input" + " " + string(i) + " " + "student's name :")
+		fmt.Scan(&name)
+		a.name = append(a.name, name)
+
+		var score int
+		fmt.Print("input" + " " + name + " " + "score :")
+		fmt.Scan(&score)
+		a.score = append(a.score, score)
+	}
+	fmt.Println("\n\nAvarage Score Student is", a.Avarage())
+	scoreMax, nameMax := a.Max()
+	fmt.Println("Max Score Student is : "+nameMax+" (", scoreMax, ")")
+	scoreMin, nameMin := a.Min()
+	fmt.Println("Min Score Student is : "+nameMin+" (", scoreMin, ")")
+
+}
